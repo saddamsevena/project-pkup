@@ -21,10 +21,9 @@ I'm Okay is a web-based Psychological counseling platforms which devoted to ment
 
 | NPM           | Name        |
 | ------------- |-------------|
-| 140810190006  | Muhammad Fadlan Fasya |
+| 140810190010  | Cut Fazira Zuhra |
 | 140810190015  | Salsabila Karin |
 | 140810190017  | Saddam Habibi Utomo |
-| 140810190029  | Rellisa Puspa Kusuma |
-| 140810190049  | Anastasia Victoria Yuarsa |
+| 140810190068  | Fadhillah Akbar I |
 
 ## License
