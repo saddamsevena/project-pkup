@@ -78,6 +78,9 @@
             <div class="col">
               <a class="nav" href="#">Konseling</a>
             </div>
+            <div class="col">
+              <a class="nav" href="{{ url('/record') }}">Records</a>
+            </div>
           </div>
         </div>
 

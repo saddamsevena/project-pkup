@@ -18,17 +18,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/howtouse', function () {
-    return view('howtouse');
-});
-
-Route::get('/about', function () {
-    return view('about');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
-});
 
 Auth::routes();
 
@@ -57,3 +46,11 @@ Route::get('/konseling', [App\Http\Controllers\KonselingController::class, 'inde
 Route::get('/profile/view/{id}', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile.view');
 Route::get('/profile/edit/{id}', [App\Http\Controllers\ProfileController::class, 'edit'])->name('profile.edit');
 Route::put('/profile/update', [App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
+
+Route::get('/record', [App\Http\Controllers\RecordController::class, 'index']);
+Route::get('/record/read/{id}', [App\Http\Controllers\RecordController::class, 'read']);
+Route::get('/record/insert', [App\Http\Controllers\RecordController::class, 'create']);
+Route::post('/record/store', [App\Http\Controllers\RecordController::class, 'store']);
+Route::get('/record/delete/{id}', [App\Http\Controllers\RecordController::class, 'delete']);
+Route::get('/record/edit/{id}', [App\Http\Controllers\RecordController::class, 'edit']);
+Route::post('/record/update', [App\Http\Controllers\RecordController::class, 'update']);
