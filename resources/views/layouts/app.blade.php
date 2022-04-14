@@ -67,11 +67,11 @@
         width: 100px;
         height: 100px;
       }
-      @yield('css')
+      @yield('css');
     </style>
 
 <body>
-  <!-- START NAVIGATION BAR -->
+  <!-- START NAVIGATION BAR --> 
   <nav class="bg-dark py-2">
     <div class="container">
       <div class="row d-flex justify-content-between align-items-center">
@@ -162,7 +162,7 @@
   <!-- END MAIN -->
 
   <!-- START FOOTER -->
-  <footer class="text-center text-lg-start bg-dark">
+  <footer class="container text-center text-lg-start bg-dark">
     <div class="container text-md-start mt-5">
       <div class="row mt-3">
         <!-- Logo -->

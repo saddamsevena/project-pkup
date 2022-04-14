@@ -5,19 +5,17 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">
-                   
+                <div class="card-header text-center text-bold h1">
+                    Edit Record
                 </div>
-                
-               
                 <div class="card-body">
                 @foreach($records as $r)
                 <form action="/record/update" method="post">
 		            {{ csrf_field() }}
                     <input type="hidden" name="id" value="{{ $r->id }}"> <br/>
-                    tanggal <input type="date" name="tanggal" required="required" value="{{ $r->tanggal }}"> <br/>
-                    isi <textarea name="isi" required="required">{{ $r->isi_record }}</textarea><br/>
-                    <input type="submit" value="Simpanan">
+                    <input type="date" name="tanggal" class="form-control" required="required" value="{{ $r->tanggal }}"> <br/>
+                    <textarea name="isi" class="form-control" required="required">{{ $r->isi_record }}</textarea><br/>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
                 </form>
                 @endforeach  
                 </div>

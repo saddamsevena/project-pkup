@@ -13,15 +13,19 @@
 @endsection
 
 @section('content')
-
     @foreach($records as $r)
-        <div class="col-12 text-center mb-5">
-            <p class="h1">{{$r->tanggal}}</p>
-            <p class="h1">{{$r->isi_record}}</p>
-            <a href="/record/edit/{{$r->id}}">Edit record</a>
-            <a href="/record/delete/{{$r->id}}">Hapus record</a>
-            
-    </div>
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header text-center text-bold h1">
+                    Record {{$r->tanggal}}
+                </div>
+                <div class="card-body">
+                    <p class="text-bold h4">Isi record :</p>
+                    <p class="h-5">{{$r->isi_record}}</p>
+                    <a href="/record/edit/{{$r->id}}" class="btn btn-secondary">Edit record</a>
+                    <a href="/record/delete/{{$r->id}}" class="btn btn-secondary">Hapus record</a>
+                </div>
+            </div>
+        </div>
     @endforeach
-    
 @endsection

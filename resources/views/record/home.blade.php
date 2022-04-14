@@ -17,16 +17,45 @@
 @endsection
 
 @section('content')
-    <h3>Record berdasarkan tanggal</h3>
-        @foreach($records as $r)
-            @if($r->user_id == Auth::user()->id)
-            <div class="topik">
-            <a href="/record/read/{{$r->id}}">
-                <t class="h5">{{$r->tanggal}}</>
-                </a>
-            </div>
-            @endif
-        @endforeach
-    <br>
-    <a href="/record/insert">Tambahkan record</a>
+<div class="container-fluid">
+    <div class="card p-4">
+        <div class="card-header text-center text-bold h1">
+            Record berdasarkan tanggal
+        </div>
+        <table class="table table-responsive table-striped text-center table-hover">
+            <thead>
+                <tr>
+                    <th class="col-1">ID</th>
+                    <th class="col-1">Tanggal</th>
+                    <th class="col-4">Pesan</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($records as $r)
+                    @if($r->user_id == Auth::user()->id)
+                    <tr>
+                        <td>
+                            <a href="/record/read/{{$r->id}}">
+                                {{$r->id}}</>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="/record/read/{{$r->id}}">
+                                <t>{{$r->tanggal}}</>
+                            </a>
+                        </td>
+                        <td class="text-justify">
+                            <a href="/record/read/{{$r->id}}">
+                                {{$r->isi_record}}
+                            </a>
+                        </td>
+                    </tr>
+                    @endif
+                @endforeach
+            </tbody>
+        </table>
+        <br>
+        <a href="/record/insert" class="btn btn-secondary align-self-center" style="width: 200px;" >Tambahkan record</a>
+    </div>
+</div>
 @endsection

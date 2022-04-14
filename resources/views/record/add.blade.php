@@ -5,17 +5,15 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">
-                   
+                <div class="card-header text-center text-bold h1">
+                    Input record baru
                 </div>
-                
-               
                 <div class="card-body">
                 <form action="/record/store" method="post">
 		            {{ csrf_field() }}
-                    tanggal <input type="date" name="tanggal" required="required"> <br/>
-                    isi <textarea name="isi" required="required"></textarea><br/>
-                    <input type="submit" value="Simpanan">
+                    <input type="date" name="tanggal" class="form-control" required="required"> <br/>
+                    <textarea name="isi" class="form-control" placeholder="Masukkan pesan disini" required="required"></textarea><br/>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
                 </form>  
                 </div>
             </div>

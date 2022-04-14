@@ -19,7 +19,6 @@ class CreateRecordsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->date('tanggal');
             $table->text('isi_record');
-            $table->updated_at();
         });
     }
 
