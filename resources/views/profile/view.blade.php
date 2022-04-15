@@ -19,20 +19,15 @@
 @section('content')
 @foreach($user as $users)
 <div class="card">
-    <div class="card-body">
-        <div class="row">
-            <div class="col-12 text-center">
-                <img src="/storage/profil/img/{{ $users->photo }}" width="150px">
-            </div>
-            <div class="col-12">
-                <center><p class="h1 card-title">{{ $users->name }}</p><center>
-                <p>{{$users->email}}<br>
-                <p>{{$users->jenis_kelamin}}
-                <p>{{$users->phone}}<br><br>
-                <a href="{{ route('profile.edit',$users->id) }}" class="btn btn-primary">Edit Profile</a>
-            </div>
-        </div>
-    </div>
+  <img class="align-self-center p-5" src="/storage/profil/img/{{ $users->photo }}" width="150px">
+  <div class="card-body">
+    <h5 class="card-title">{{ $users->name }}</h5>
+    <p>{{$users->email}}<br>
+    <p>{{$users->jenis_kelamin}}
+    <p>{{$users->phone}}<br><br>
+    <a href="{{ route('profile.edit',$users->id) }}" class="btn btn-primary">Edit Profile</a>
+    <a href="{{ url('/record') }}" class="btn btn-secondary">Riwayat Konseling</a>
+  </div>
 </div>
 @endforeach
 @endsection
